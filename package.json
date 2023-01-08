@@ -6,7 +6,8 @@
   "author": "Kamil Hassan",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index"
+    "start": "NODE_ENV='dev' nodemon index",
+    "production": "NODE_ENV='production' nodemon index"
   },
   "devDependencies": {
     "eslint": "^8.2.0",

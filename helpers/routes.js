@@ -7,10 +7,10 @@
  */
 
 // module dependencies
-const { sampleHandler } = require("./../handlers/routeHandlers/sample");
+const { sampleHandler } = require('../handlers/routeHandlers/sample');
 // module scaffolding
 const routes = {
-  sample: sampleHandler,
+    sample: sampleHandler,
 };
 
 module.exports = routes;

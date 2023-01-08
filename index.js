@@ -3,22 +3,23 @@
     description: This is a practice project for learning backend.
 */
 
-const http = require("http");
-const { handleReqRes } = require("./helpers/handleReqRes");
+const http = require('http');
+const data = require('./lib/data');
+
+const { handleReqRes } = require('./helpers/handleReqRes');
+const environment = require('./helpers/environments');
 // module scaffolding
 const app = {};
 
-// configuration
-app.config = {
-  port: 3000,
-};
-
-//create server function
+// create server function
 app.createServer = () => {
-  const server = http.createServer(handleReqRes);
-  server.listen(app.config.port, () => {
-    console.log("listening to port ", app.config.port);
-  });
+    const server = http.createServer(handleReqRes);
+    server.listen(environment.port, () = > {
+        console.log('listening to port ', environment.port);
+        data.read('test', 'newFile', (err, d) => {
+            console.log(err, d);
+        });
+    });
 };
 
 // handle request and response

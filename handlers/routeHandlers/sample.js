@@ -12,10 +12,9 @@
 const handler = {};
 
 handler.sampleHandler = (requiredProperties, callback) => {
-  console.log("requested Properties, ", requiredProperties);
-  callback(200, {
-    message: "This is a message",
-  });
+    callback(200, {
+        message: 'This is a message',
+    });
 };
 
 module.exports = handler;

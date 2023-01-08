@@ -8,6 +8,10 @@
     "node": true
   },
   "rules": {
+    "no-unused-vars": [
+      "warn",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
     "no-console": 0,
     "indent": 0,
     "prettier/prettier": [
